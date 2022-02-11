@@ -1,0 +1,12 @@
+{
+  "name": "picoui",
+  "version": "1.0.0",
+  "description": "UI components based on PicoCSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["pico", "picocss", "ui", "components"],
+  "author": "J Fuller Co",
+  "license": "ISC"
+}

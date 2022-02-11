@@ -1,0 +1,123 @@
+/* .card {
+    padding: 1rem;
+    background-color: #73828c;
+} */
+div[id='root'] {
+    margin: 0 !important;
+    box-sizing: border-box;
+    padding: 0;
+    overscroll-behavior: none;
+}
+
+.topNav {
+    height: 90px;
+}
+
+.topNav nav {
+    position: fixed;
+    background-color: var(--background-color);
+    z-index: 100;
+}
+
+aside summary {
+    color: var(--primary) !important;
+    text-transform: uppercase;
+    font-size: medium;
+}
+aside details li {
+    font-size: 16px;
+}
+
+/* aside details li a {
+    padding: 0;
+    font-size: 16px;
+    color: var(--muted-color);
+    text-transform: none;
+    max-width: 200 !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+} */
+
+aside details ul {
+    background-color: var(--card-background-color);
+}
+
+div[class='griddy'] {
+    display: grid;
+    grid-template-columns: 250px calc(70vw - 2);
+    grid-template-areas: 'closed-on-mobile content';
+    padding-top: calc(var(--spacing) * 1.75);                                       
+}
+
+.closed-on-mobile aside nav {
+    width: 240px;
+    max-height: calc(100vh - 5.5rem);
+    overflow-x: hidden;
+    overflow-y: auto;
+    grid-area: 'closed-on-mobile';
+    transition: all .5s ease-in-out;
+}
+
+.closed-on-mobile aside {
+    position: fixed;
+    left: 1rem;
+}
+
+.content{
+    width: 70vw;
+    grid-area: 'content';
+    margin-left: 10vw;
+}
+
+section[class='modules']>div[class='grid'] {
+    grid-template-columns: auto auto;
+}
+
+.brand { 
+    font-size: 1.5em;
+}
+
+.beta {
+    font-size: .9em;
+}
+
+.card-table {
+    display: block;
+    --block-spacing-vertical: calc(var(--spacing) * 1.5);
+    
+    
+}
+
+.card-table main {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+article[class='card-table'] figure {
+    min-width: 500px;
+    max-width: auto;
+}
+
+@media (max-width: 992px) {
+    
+    div.closed-on-mobile aside {
+        position: inherit;
+    }
+    .closed-on-mobile aside nav {
+        width: 100%;
+    }
+    div[class='griddy'] {
+        grid-template-columns: auto;
+        grid-template-areas: 'closed-on-mobile'
+                                        'content';
+    }
+}
+
+
+
+
