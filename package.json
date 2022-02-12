@@ -1,5 +1,5 @@
 {
-  "name": "picoui",
+  "name": "picocss-ui",
   "version": "1.0.0",
   "description": "UI components based on PicoCSS",
   "main": "index.js",
